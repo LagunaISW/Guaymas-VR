@@ -1,13 +1,20 @@
 package mx.itson.guaymas_vr;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import mx.itson.guaymas_vr.dummy.DummyContent;
+
+
+public class MainActivity extends AppCompatActivity implements PhotoFragment.OnListFragmentInteractionListener {
 
     private TextView mTextMessage;
 
@@ -16,21 +23,42 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
-                    return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
-                    return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
-            }
-            return false;
+            displayView(item.getItemId());
+            return true;
         }
 
     };
+
+    public void displayView(int viewId) {
+
+        Fragment fragment = null;
+        String title = getString(R.string.app_name);
+
+        switch (viewId) {
+            case R.id.navigation_home:
+                fragment = new MapsFragment();
+                title = "Maps";
+
+                break;
+            case R.id.navigation_dashboard:
+                fragment = new PhotoFragment();
+                title = "Photo";
+                break;
+
+        }
+
+        if (fragment != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content, fragment);
+            ft.commit();
+        }
+
+        // set the toolbar title
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(title);
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +68,24 @@ public class MainActivity extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        displayView(R.id.navigation_home);
+
     }
 
+    @Override
+    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+        iniciarPanoActivity(this,
+                getString(R.string.presidetes_file),
+                getString(R.string.presidetes_title),
+                getString(R.string.presidetes_description));
+    }
+
+    public void iniciarPanoActivity(Activity activity, String file, String title, String description) {
+        Intent intent = new Intent(activity, PanoActivity.class);
+        intent.putExtra(MapsFragment.FILE, file);
+        intent.putExtra(MapsFragment.TITLE, title);
+        intent.putExtra(MapsFragment.DESCRIPTION, description);
+        startActivity(intent);
+    }
 }
