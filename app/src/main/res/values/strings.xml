@@ -1,6 +1,36 @@
 <resources>
-    <string name="app_name">Guaymas-VR</string>
+    <string name="app_name">Guaymas VR</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="action_settings">Acerca de</string>
+    <string name="galeria_360">Galería</string>
+    <string name="mapas">Mapas</string>
+    <string name="street_view">Vista 360</string>
+
+    <string name="title_activity_galeria">Galería</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="title_activity_street">Vista 360</string>
+    <string name="title_activity_tabs">Guaymas VR</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="presidetes_file">tresPresidentes.JPG</string>
+    <string name="presidetes_title">Plaza de Los Tres Presidentes</string>
+    <string name="presidetes_description">Esta plaza se construyó en un terreno que abarcaba una gran cuadra entre las calles 23 y 24 y las avenidas Serdán y Abelardo L. Rodríguez.
+" + "En los tiempos antiguos existió en ese lugar un cerrito de considerables dimensiones sobre el cual había un fortín llamado el Fortín del Muelle. Dicho fortín no pudo ser tomado por los franceses encabezados por el conde Gastón de Raousset Boulbon en 1854.  Los filibusteros fueron derrotados y el conde, luego de un juicio militar, fue fusilado al pie del cerrito, del lado del mar que en ese tiempo llegaba hasta lo que hoy es la avenida Abelardo L. Rodríguez\n" +
+        "Posteriormente la gente comenzó a construir alrededor del cerro y formó una cuadra grande. Las construcciones más destacadas de principios del siglo XX eran las de don Luis A. Martínez, en la esquina sureste, o sea la que queda enfrente de la gasolinería Falcón y la del general José María Rangel, por la calle 24. Por la calle del muelle (Hoy A. L. Rodríguez) estaba el hotel Central que tenía su segundo piso de madera y en la esquina de la calle 23 y calle del muelle estaba la tienda de los hermanos Ricaud.  La casa de Martínez, el hotel y la tienda se quemaron en un gran incendio en abril de 1914 pues contenían mucha madera en su construcción. Con el paso de los años se fue reduciendo el tamaño del cerrito pues se tomaba piedra de allí para algunas construcciones.</string>
+
+    <string name="palacio_file">palacio.JPG</string>
+    <string name="palacio_title">Palacio Municipal de Guaymas</string>
+    <string name="palacio_description">En el solar donde se construyó el Palacio Municipal estaban ubicadas las antiquísimas Casas Consistoriales ( corporación que administraba el Municipio ) y de la prisión civil, donde en el verano de 1854, estuvo detenido el Conde Raousset, lo juzgaba el Consejo de Guerra presidido por el General Domingo Ramírez de Arellano, que lo condenó a la pena capital.
+" + "\n" + "Un 17 de Enero de 1897, siendo Gobernador del Estado, el señor Ramón Corral, se inauguró la nueva Cárcel de Guaymas y el expresidente de Guaymas y Vicegobernador Dr. Prisciliano Figueroa, asistió en funciones de aquel, el día siguiente, la cárcel vieja se cerró y se pensó construir en ese terreno el nuevo Palacio municipal .\n" +"\n" +
+        "En sesión ordinaria de cabildo del 2 de julio de 1898, siendo presidente el Sr. Fernando Montijo, presentó el Sr. Ing. Arturo Wrotnowski, los planos, especificaciones y presupuesto para llevar a cabo la construcción del edificio municipal.</string>
+
+    <string name="malecon_file">malecon.JPG</string>
+    <string name="fuente_malecon_file">fuenteMalecon.JPG</string>
+    <string name="malecon_title">Malecón Turístico de Guaymas</string>
+    <string name="malecon_description">El Malecón turístico se construyó sobre la bahía de Guaymas; donde se incluyeron espacios para el comercio, elementos turísticos, así como áreas receativas para los guayamenses y visitantes. Este proyecto es una obra estratégica que representa un atractivo más en el centro histórico del municipio.
+" + "La fuente danzante es la más moderna del país y la primera de su tipo en Sonora, que muestra un espectáculo de fantasía que ofrece efectos y movimientos de agua al rítmo de diferentes canciones, realzadas por luces de colores brillantes, indicó Martín Larios Velarde, director de infraestructura urbana y ecología.</string>
+
 </resources>
