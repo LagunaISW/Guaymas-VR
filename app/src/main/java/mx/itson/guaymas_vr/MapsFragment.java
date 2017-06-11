@@ -33,8 +33,8 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
     public static final String TITLE = "title";
     public static final String DESCRIPTION = "description";
     private View rootView;
-    GoogleMap mMap;
-    MapView mMapView;
+    private GoogleMap mMap;
+    private MapView mMapView;
 
     public static MapsFragment newInstance() {
         return new MapsFragment();

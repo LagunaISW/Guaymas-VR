@@ -8,20 +8,20 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import mx.itson.guaymas_vr.Entity.Locations.Location;
 import mx.itson.guaymas_vr.PhotoFragment.OnListFragmentInteractionListener;
-import mx.itson.guaymas_vr.dummy.DummyContent.DummyItem;
 
 /**
- * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
+ * {@link RecyclerView.Adapter} that can display a {@link Location} and makes a call to the
  * specified {@link OnListFragmentInteractionListener}.
  * TODO: Replace the implementation with code for your data type.
  */
 public class MyPhotoRecyclerViewAdapter extends RecyclerView.Adapter<MyPhotoRecyclerViewAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
+    private final List<Location> mValues;
     private final OnListFragmentInteractionListener mListener;
 
-    public MyPhotoRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public MyPhotoRecyclerViewAdapter(List<Location> items, OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -60,7 +60,7 @@ public class MyPhotoRecyclerViewAdapter extends RecyclerView.Adapter<MyPhotoRecy
         public final View mView;
         public final TextView mIdView;
         public final TextView mContentView;
-        public DummyItem mItem;
+        public Location mItem;
 
         public ViewHolder(View view) {
             super(view);

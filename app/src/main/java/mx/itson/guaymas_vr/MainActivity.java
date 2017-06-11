@@ -9,14 +9,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.TextView;
 
-import mx.itson.guaymas_vr.dummy.DummyContent;
+import mx.itson.guaymas_vr.Entity.Locations;
 
 
 public class MainActivity extends AppCompatActivity implements PhotoFragment.OnListFragmentInteractionListener {
-
-    private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -37,21 +34,22 @@ public class MainActivity extends AppCompatActivity implements PhotoFragment.OnL
         switch (viewId) {
             case R.id.navigation_home:
                 fragment = new MapsFragment();
-                title = "Maps";
+                title = "Mapa";
 
                 break;
             case R.id.navigation_dashboard:
                 fragment = new PhotoFragment();
-                title = "Photo";
+                title = "Galeria";
                 break;
+            default:
+                fragment = new MapsFragment();
+                title = "Mapa";
 
         }
 
-        if (fragment != null) {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.content, fragment);
-            ft.commit();
-        }
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.content, fragment);
+        ft.commit();
 
         // set the toolbar title
         if (getSupportActionBar() != null) {
@@ -65,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements PhotoFragment.OnL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
@@ -74,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements PhotoFragment.OnL
     }
 
     @Override
-    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+    public void onListFragmentInteraction(Locations.Location item) {
         iniciarPanoActivity(this,
                 getString(R.string.presidetes_file),
                 getString(R.string.presidetes_title),
