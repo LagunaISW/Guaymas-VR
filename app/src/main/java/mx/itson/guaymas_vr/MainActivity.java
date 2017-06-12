@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
@@ -76,24 +77,35 @@ public class MainActivity extends AppCompatActivity implements PhotoFragment.OnL
         Locations.addItem(
                 getString(R.string.presidetes_file),
                 getString(R.string.presidetes_title),
-                getString(R.string.presidetes_description));
+                getString(R.string.presidetes_description),
+                ResourcesCompat.getDrawable(getResources(), R.drawable.presidentes, null));
+
         Locations.addItem(
                 getString(R.string.malecon_file),
                 getString(R.string.malecon_title),
-                getString(R.string.malecon_description));
+                getString(R.string.malecon_description),
+                ResourcesCompat.getDrawable(getResources(), R.drawable.malecon, null));
+
+        Locations.addItem(
+                getString(R.string.palacio_file),
+                getString(R.string.palacio_title),
+                getString(R.string.palacio_description),
+                ResourcesCompat.getDrawable(getResources(), R.drawable.palacio, null));
+
         Locations.addItem(
                 getString(R.string.fuente_malecon_file),
                 getString(R.string.malecon_title),
-                getString(R.string.malecon_description));
+                getString(R.string.malecon_description),
+                ResourcesCompat.getDrawable(getResources(), R.drawable.malecon, null));
 
     }
 
     @Override
     public void onListFragmentInteraction(Locations.Location item) {
         iniciarPanoActivity(this,
-                getString(R.string.presidetes_file),
-                getString(R.string.presidetes_title),
-                getString(R.string.presidetes_description));
+                item.file,
+                item.title,
+                item.description);
     }
 
     public void iniciarPanoActivity(Activity activity, String file, String title, String description) {

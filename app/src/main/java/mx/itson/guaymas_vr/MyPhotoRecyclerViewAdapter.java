@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -33,6 +34,7 @@ public class MyPhotoRecyclerViewAdapter extends RecyclerView.Adapter<MyPhotoRecy
         holder.mItem = mValues.get(position);
         holder.mIdView.setText(mValues.get(position).title);
         holder.mContentView.setText(mValues.get(position).description.substring(0, 100) + "...");
+        holder.mIcon.setImageDrawable(mValues.get(position).icon);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +57,7 @@ public class MyPhotoRecyclerViewAdapter extends RecyclerView.Adapter<MyPhotoRecy
         public final View mView;
         public final TextView mIdView;
         public final TextView mContentView;
+        public final ImageView mIcon;
         public Location mItem;
 
         public ViewHolder(View view) {
@@ -62,6 +65,7 @@ public class MyPhotoRecyclerViewAdapter extends RecyclerView.Adapter<MyPhotoRecy
             mView = view;
             mIdView = view.findViewById(R.id.id);
             mContentView = view.findViewById(R.id.content);
+            mIcon = view.findViewById(R.id.icon);
         }
 
         @Override
