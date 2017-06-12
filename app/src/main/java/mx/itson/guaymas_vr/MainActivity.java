@@ -32,14 +32,19 @@ public class MainActivity extends AppCompatActivity implements PhotoFragment.OnL
         String title = getString(R.string.app_name);
 
         switch (viewId) {
-            case R.id.navigation_home:
+            case R.id.navigation_map:
                 fragment = new MapsFragment();
                 title = "Mapa";
 
                 break;
-            case R.id.navigation_dashboard:
+            case R.id.navigation_gallery:
                 fragment = new PhotoFragment();
                 title = "Galeria";
+                break;
+
+            case R.id.navigation_about:
+                fragment = new AboutFragment();
+                title = "Acerca de";
                 break;
             default:
                 fragment = new MapsFragment();
@@ -66,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements PhotoFragment.OnL
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        displayView(R.id.navigation_home);
+        displayView(R.id.navigation_map);
 
     }
 

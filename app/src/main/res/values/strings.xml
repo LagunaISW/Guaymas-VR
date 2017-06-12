@@ -35,5 +35,10 @@ La fuente danzante es la más moderna del país y la primera de su tipo en Sonor
     <string name="title_activity_splash">Guaymas VR</string>
     <string name="titulo">Titulo</string>
     <string name="descripcion">Descripcion</string>
+    <string name="acerca_de">Acerca de</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logos_de_colaboradores">Logos de colaboradores</string>
 
 </resources>

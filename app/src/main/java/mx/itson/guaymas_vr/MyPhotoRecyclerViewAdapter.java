@@ -11,11 +11,6 @@ import java.util.List;
 import mx.itson.guaymas_vr.Entity.Locations.Location;
 import mx.itson.guaymas_vr.PhotoFragment.OnListFragmentInteractionListener;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link Location} and makes a call to the
- * specified {@link OnListFragmentInteractionListener}.
- * TODO: Replace the implementation with code for your data type.
- */
 public class MyPhotoRecyclerViewAdapter extends RecyclerView.Adapter<MyPhotoRecyclerViewAdapter.ViewHolder> {
 
     private final List<Location> mValues;
