@@ -73,6 +73,19 @@ public class MainActivity extends AppCompatActivity implements PhotoFragment.OnL
 
         displayView(R.id.navigation_map);
 
+        Locations.addItem(
+                getString(R.string.presidetes_file),
+                getString(R.string.presidetes_title),
+                getString(R.string.presidetes_description));
+        Locations.addItem(
+                getString(R.string.malecon_file),
+                getString(R.string.malecon_title),
+                getString(R.string.malecon_description));
+        Locations.addItem(
+                getString(R.string.fuente_malecon_file),
+                getString(R.string.malecon_title),
+                getString(R.string.malecon_description));
+
     }
 
     @Override

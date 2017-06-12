@@ -14,48 +14,28 @@ public class Locations {
 
     public static final Map<String, Location> ITEM_MAP = new HashMap<String, Location>();
 
-    private static final int COUNT = 25;
 
-    static {
-        // Add some sample items.
-        for (int i = 1; i <= COUNT; i++) {
-            addItem(createLocation(i));
-        }
-    }
-
-    private static void addItem(Location location) {
+    public static void addItem(String file, String title, String description) {
+        Location location = new Location(file, title, description);
         ITEMS.add(location);
-        ITEM_MAP.put(location.id, location);
-    }
-
-    private static Location createLocation(int position) {
-        return new Location(String.valueOf(position), "Item " + position, makeDetails(position));
-    }
-
-    private static String makeDetails(int position) {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Details about Location: ").append(position);
-        for (int i = 0; i < position; i++) {
-            builder.append("\nMore details information here.");
-        }
-        return builder.toString();
+        ITEM_MAP.put(location.file, location);
     }
 
 
     public static class Location {
-        public final String id;
-        public final String content;
-        public final String details;
+        public final String file;
+        public final String title;
+        public final String description;
 
-        public Location(String id, String content, String details) {
-            this.id = id;
-            this.content = content;
-            this.details = details;
+        Location(String file, String title, String description) {
+            this.file = file;
+            this.title = title;
+            this.description = description;
         }
 
         @Override
         public String toString() {
-            return content;
+            return title;
         }
     }
 }
