@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">Guaymas VR</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
 
     <string name="action_settings">Acerca de</string>
     <string name="galeria_360">Galería</string>
@@ -12,8 +9,6 @@
     <string name="title_activity_galeria">Galería</string>
     <string name="title_activity_maps">Mapa</string>
     <string name="title_activity_street">Vista 360</string>
-    <string name="title_activity_tabs">Guaymas VR</string>
-    <string name="section_format">Hello World from section: %1$d</string>
 
     <string name="presidetes_file">tresPresidentes.JPG</string>
     <string name="presidetes_title">Plaza de Los Tres Presidentes</string>
@@ -37,8 +32,6 @@ La fuente danzante es la más moderna del país y la primera de su tipo en Sonor
     <string name="descripcion">Descripcion</string>
     <string name="acerca_de">Acerca de</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logos_de_colaboradores">Logos de colaboradores</string>
 
 </resources>
